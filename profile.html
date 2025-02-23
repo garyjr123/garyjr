@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.PNG">
+    <title>Profile</title>
+    <style>
+        body{
+            background-color:	#181818;
+            color: white;
+            margin: 0;
+        } 
+        #profile{
+            border-radius: 50%;
+            width: 200px;
+           height: 200px;
+            position: relative;
+            top: -100px;
+           float: left;
+           background-image: url("profile.jpg");
+           background-size: 100% 100%;
+        }
+        #profile:hover{
+            filter: contrast(200%);
+        }
+        .logo{
+            height: 300px;
+            width: 100%;
+        }
+        .logo:hover{
+            filter: contrast(200%);
+        }
+        .con{
+            margin: auto;
+            position: relative;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            position: fixed;
+            z-index: 100;
+            width: 100%;
+        }
+        .am{
+            background-color: #0866ff;
+            padding: 20px;
+         
+            color: white;
+            border: none;
+        }
+        .ep{
+            background-color: #303030;
+            padding: 20px;
+         
+            color: white;
+            border: none;
+        }
+        hr{
+            position: relative;
+            left: -10px;
+            border: none;
+            width: 100%;
+            height: 1px;
+            color: #333; 
+            background-color: #333;  
+        }
+        .box{
+            width: 400px;
+            background-color: #fff;
+            margin: auto;
+            color: black;
+            font-weight: bold;
+            border-radius: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            box-shadow: 10px 20px #0866ff;
+
+        }
+        .box h2{
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+        span{
+            color: green;
+            font-weight: bold;
+        }
+        .read{
+            padding: 10px;
+            margin-bottom: 30px;
+            margin-left: 26px;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            background-color: #0866ff;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .read:hover{
+            background-color: #303030;
+        }
+        .btna button:hover{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body bgcolor="black">
+
+    <div class="con">
+        <img onclick="back()" src="back.PNG" width="50" alt="">
+        <hr>
+    </div>
+        <img src="1010.JPG" class="logo" alt="">
+        <div id="profile"></div>
+        <br>
+        <h1><b>Gary F. Meramonte Jr.</b></h1>
+        <h3>100M<span style="color: grey;"> friends</span></h3>
+     
+<div class="btna">
+    <button onclick="ec()" class="am">Edit profile to KID</button>
+<button onclick="ep()" class="ep">Edit profile to OLD</button>
+</div>
+<hr>
+<div class="box">
+<h2>Personal Info</h2>
+<ul>
+ <li>First Name <span>GARY</span></li>
+ <li>Middle Name <span>FERNANDEZ</span></li>
+ <li>Last Name <span>MERAMONTE JR</span></li>
+ <li>Gender <span>MALE</span></li>
+ <li>Age <span>23</span></li>
+ <li>Birth Date <span>APRIL 9, 2001</span></li>
+ <li>Blood Type <span>O</span></li>
+ <li>Religion <span>MEMBER OF CHURCH OF GOD</span></li>
+ <li>Email <span>garymeramontejr@gmail.com</span></li>
+ <li>Contact no. <span>09610550286 </span></li>
+</ul>
+<h2>EDUCATIONAL BACKGROUND</h2>
+<ul>
+    <li>Elementary School <span>Babag 2 Elementary School</span></li>
+    <li>Junior High School <span>Babag 1 National High School</span></li>
+    <li>Senior High School <span>Proverbs Ville Academy Foundation etc.</span></li>
+    <li>College <span>Lapu-lapu City College</span></li>
+</ul>
+<button onclick="read()" class="read">Read</button>
+<div style="display: none;">
+    <textarea name="" id="text">
+        Personal Info .<br>
+
+First Name , GARY .<br>
+
+Middle Name, FERNANDEZ.<br>
+
+Last Name, MERAMONTE JR.<br>
+
+Gender, MALE.<br>
+
+Age, 23.<br>
+
+Birth Date, APRIL 9, 2001.<br>
+
+Blood Type, O.<br>
+
+Religion, MEMBER OF CHURCH OF GOD. <br>
+
+Email, garymeramontejr@gmail.com. <br>
+
+Contact number , 09610550286. <br>
+
+
+EDUCATIONAL BACKGROUND. <br>
+
+Elementary School, Babag 2 Elementary School. <br>
+    
+Junior High School ,Babag 1 National High School. <br>
+ 
+Senior High School Proverbs Ville Academy Foundation etc.. <br>
+
+College Lapu-lapu City College
+
+
+    </textarea>
+</div>
+</div>
+<br><br><br><br><br><br><br><br><br><br>
+</body>
+<script>
+    function back(){
+        location.replace("index.html");
+    }
+    function ep(){
+        document.getElementById("profile").style='background-image: url("(5).jpg");background-size: 100% 100%;'
+    }
+    function ec(){
+        document.getElementById("profile").style='background-image: url("batapako.jpg");background-size: 100% 100%;'
+    }
+    function read(){
+        var a = document.getElementById("text").value;
+        var b = new SpeechSynthesisUtterance(a);
+        speechSynthesis.speak(b);
+    }
+</script>
+</html>

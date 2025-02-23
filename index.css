@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    color: white;
+    background-color: black;
+}
+.con{
+    background-color: black;
+    width: 90%;
+    position: relative;
+    margin: auto;
+}
+.profile{
+    width: 100px;
+    border-radius: 100%;
+}
+.profile::after{
+    content: "ffffffffffff";
+    width: 50px;
+    height: 340px;
+    color: white;
+    background-color: green;
+}
+#woym{
+    top: -30px;
+    position: relative;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 2rem;
+    width: 59%;
+}
+#logout{
+float: right;
+padding-top: 5px;
+padding-right: 20px;
+    position: relative;
+    width: 100px;
+}
+.post{
+    width: 90px;
+    border-radius: 100%;
+}
+p{
+    color: white;
+}
+.gallery{
+  
+    position: relative;
+    width: 60px;
+
+    float: right;
+    padding-right: 30px;
+    padding-top: 30px;
+}
+h2{
+    color: white;
+    padding-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

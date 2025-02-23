@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Voice Recognition</title>
+    <style>
+        body{
+            background-size: 100% 100%;
+            background-image: url("ai.jpg");
+            background-attachment: fixed;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Voice Recognition</h1>
+    <button onclick="startRecognition()">Start Recognition</button>
+    <div id="transcript"></div>
+<button onclick="speak()">Speak</button>
+<p id="text"></p>
+    <script>
+      let recognition;
+
+      function startRecognition() {
+        recognition = new webkitSpeechRecognition();
+        recognition.lang = 'en-US';
+        recognition.maxResults = 10;
+
+        recognition.onresult = event => {
+          const transcript = event.results[0][0].transcript;
+          document.getElementById('transcript').innerHTML = transcript;
+        };
+
+        recognition.start();
+      }
+function speak(){
+var transcript = document.getElementById('transcript').innerHTML;
+    if(transcript == "jarvis"){
+    var a = document.getElementById("text").innerHTML = "Yes boss Gary Jr?";
+  var b = new SpeechSynthesisUtterance(a);
+    speechSynthesis.speak(b);
+    }
+    if(transcript == "let's start"){
+    var a = document.getElementById("text").innerHTML = "okay boss Gary Jr., Good evening maam Edecto, and Good morning Classmate. this is project of Gary Jr. Its autobiography., i request to everyone to listen of his explain on his Website., Its Done Boss Gary Jr., Do you want to open your Website Now?";
+  var b = new SpeechSynthesisUtterance(a);
+    speechSynthesis.speak(b);
+    }
+    if(transcript == "yes"){
+    var a = document.getElementById("text").innerHTML = "ok boss Gary Jr opening your website now., Everyone listen";
+  var b = new SpeechSynthesisUtterance(a);
+    speechSynthesis.speak(b);
+    location.replace("login.html");
+    }
+  //  var a = document.getElementById("transcript").innerHTML;
+//    var b = new SpeechSynthesisUtterance(a);
+  //  speechSynthesis.speak(b);
+}
+
+    </script>
+  </body>
+</html>

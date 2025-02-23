@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="shortcut icon" href="logo.png">
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            color: white;
+            background-color: #181818;
+        }
+        
+.post{
+    width: 90px;
+    border-radius: 100%;
+}
+textarea{
+    font-size: 1rem;
+    font-family: cursive;
+    font-weight: bold;
+    background-color:honeydew;
+    height: 560px;
+    width: 90%;
+    margin: auto;
+    background-color: grey;
+    color: black;
+}
+button{
+    padding: 20px;
+    border: none;
+    background-color: #0866ff;
+    color: white;
+    border-radius: 10px;
+}
+button:hover{
+    background-color: orange;
+   }
+.con{
+            margin: auto;
+            position: relative;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="con">
+       <a href="index.html">
+        <img src="back.PNG" width="50" alt="">
+       </a>
+        <hr>
+    </div>
+    <div style="display: flex;">
+        <img onclick="pro()" src="profile.jpg" class="post" alt="">
+        &#160;&#160;&#160;&#160;
+        <p><b><h3 style="color: white;">Gary F. Meramonte Jr.</h3></b></p>
+    </div>
+    <br><br>
+    <h2>About Me</h2>
+    <center>
+        <textarea  id="me" name="" cols="30" rows="10" disabled>
+            Im Gary F. Meramonte Jr., leaving in Aldea, I am 23 years old, I graduated from Proverbsville in 2020, I stopped studying in 3 years because of the pandemic, and now I came back to study in 2023 at Lapu-Lapu City College, or LLCC for short. I am glad I am part of LLCC; they have a good teacher and a good classmate. I want to become a pilot because I have the knowledge to fly. but. It's too much tuition. My father told me I should continue studying programming because I already started it when I was in grade 12, and he told me if I have work, I should study piloting soon. So I have no choice but to continue programming. In the pandemic, I study every single day until I know how to code. I had no idea about programming before.
+            I was normal when I was born; it was an accident when I fell in the cradle as a child. It's like this. My father and mother worked, and me and the nanny didn't have much left over. until I fell into the hammock. The worst thing is that my nanny didn't say this; she only said it when my parents noticed that something was different about me: I'm a kid. I'm not in school yet. There is a chance that I will be okay again. Maybe if this hadn't happened to me, maybe I wouldn't have met my classmates now. Maybe I didn't do programming. And maybe I'm already married too because people from my batch are getting married because I'm 23. I went to elementary school at Bagag 2 elementary school. I was a bit naughty there, so I went into our teacher's mass. and slept in the principal's office. They put me to sleep because there is a couch there. because my father knows them. Or maybe the principal just felt sorry for me. I went to junior high school at Babag 1 Elementary School. The class is only half a day. I am awake in the morning from 6 a.m. to 12 p.m. My father came to pick me up, even though he was tired. It's because he went home alone. tried.  I love them all, my father. but that was when I was studying in senior high in Proverbsville. That's why he went home alone. I can walk without a cane. actually "the cane given to me by my girlfriend."  Sometimes he even delivered a bag to pick up. It's late because I'm going home. because I still teach chess to children and senior students. Proverbs ville because it is mixed with kindergarten through grade 12. It's private.. So you're locked up because you're the one who came in at 6 a.m. and you're going out. It's not possible. It's 4 p.m.; you can go out. Enjoy that day too. I was a bit serious about studying. I also joked about it. Call me a joke, master. Now I'm going to joke, but it's not the same as before. I am a 2020 graduate of Proverbs Ville. it's still COVID   
+            Actually, my previous name was Aries. then it changed to Gary. My dad is Gary, so I became Gary Jr.; its a long story. Ask me if you want to know. 
+        </textarea>
+    </center>
+    <br>
+
+    <button onclick="speak()">READ</button>
+    <button onclick="stops()">STOP READING</button>
+    <button onclick="con()">CONTINUE READING</button>
+</body>
+<script>
+function speak(){
+    var a = document.getElementById("me").value;
+    var b = new SpeechSynthesisUtterance(a);
+    speechSynthesis.speak(b);
+}
+function stops(){
+    speechSynthesis.pause();
+}
+function con(){
+    speechSynthesis.resume();
+}
+</script>
+</html>

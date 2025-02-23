@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Gary Jr Website</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        hr{
+            position: relative;
+            left: -10px;
+            border: none;
+            width: 100%;
+  height: 1px;
+  /* Set the hr color */
+  color: #333;  /* old IE */
+  background-color: #333;  /
+        }
+   .R{
+    color: green;
+    font-family: cursive;
+   }
+   button{
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+   }
+   button:hover{
+    background-color: orange;
+   }
+p{
+    font-family: cursive;
+}
+.btn{
+    padding: 50px;
+    background-color: #0866ff;
+}
+.im{
+    width: 300px;
+    height: 300px;
+    background-size: 100% 100%;
+    background-image: url("Bible(1).jpg");
+}
+.im:hover{
+    background-image: url("Bible(2).jpg");
+}
+.A{
+    width: 400px;
+    margin: auto;
+    background-size: 100% 100%;
+   
+    background-image: url("A.jpg");
+}
+.A:hover{
+    background-color: black;
+}
+    </style>
+    <link rel="shortcut icon" href="logo.png">
+</head>
+<body>
+
+ 
+<div style="background-color: black; width: 100%; z-index: 100; position: fixed;">
+    <img src="logo.PNG" style="padding-left: 20px; padding-top: 5px;" width="200" alt="">
+    <img src="logout.jpg" id="logout" alt="" onclick="logout()">
+    <div style="display: flex;">
+        <a href="index.html"><h2>Home</h2></a>
+        <a href="hobbies.html"><h2>Hobbies</h2></a>
+        <a href="MyBible.html"> <h2 style="color: blue;">My Bible</h2></a>
+    </div>
+    <hr>
+</div>
+<br><br><br><br><br><br><br><br><br><br>
+<h1>My Bible</h1>
+<div class="im">
+  
+</div>
+<br>
+<p id="lis">
+    Philippians 4:6
+    <br><br> 
+Do not worry about anything. Instead, pray to God about everything. Ask him to help you with the things that you need. And thank him for his help.
+</p>
+<button onclick="li()">Listen</button>
+<h1>Religion <span class="R">"MEMBER OF CHURCH OF GOD"</span></h1>
+<img src="images.jpg" alt="">
+<br>
+<p id="text">
+    Acts 20:28
+<br><br>
+    Take heed therefore unto yourselves, and to all the flock, over the which the Holy Ghost hath made you overseers, to feed the <mark>church of God</mark>, which he hath purchased with his own blood.
+</p>
+<button onclick="info()">Info</button>
+<br>
+<p id="mem">
+    1 Corinthians 10:32 
+    <br><br>
+    Don't do anything that causes another person to trip and fall. It doesn't matter if that person is a Jew or a Greek or a <mark>member of God's church</mark>. 
+</p>
+<button onclick="member()">Member</button>
+<br><br>
+<center>
+    <button class="btn" onclick="V()">Verse of the day</button>
+</center>
+
+<textarea style="display: none;"  name="" id="V" cols="30" rows="10">
+John 14:1 
+
+    “Do not let your hearts be troubled. You believe in God; believe also in me.
+
+
+</textarea>
+<br><br><br><br>
+
+<br><br><br><br><br><br><br><br><br><br><br>
+</body>
+<script defer src="index.js"></script>
+<script>
+    function info(){
+var a = document.getElementById("text").innerHTML;
+var b = new SpeechSynthesisUtterance(a);
+speechSynthesis.speak(b);
+    }
+    function member(){
+  
+var a = document.getElementById("mem").innerHTML;
+var b = new SpeechSynthesisUtterance(a);
+speechSynthesis.speak(b);
+    
+    }
+    function li(){
+  
+  var a = document.getElementById("lis").innerHTML;
+  var b = new SpeechSynthesisUtterance(a);
+  speechSynthesis.speak(b);
+      
+      }
+      /*
+
+“Do not let your hearts be troubled. You believe in God; believe also in me.
+      */
+      function V(){
+  
+  var a = document.getElementById("V").value;
+  var b = new SpeechSynthesisUtterance(a);
+  speechSynthesis.speak(b);
+      
+      }
+</script>
+</html>
